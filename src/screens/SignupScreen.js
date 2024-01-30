@@ -1,7 +1,7 @@
 // SignupScreen.js
 
 import React, { useState } from 'react';
-import { View, TextInput, Button } from 'react-native';
+import { View, TextInput, Button ,StyleSheet} from 'react-native';
 import { signUp } from '../services/AuthService'; // Import the AuthService function
 
 const SignupScreen = () => {
@@ -20,16 +20,18 @@ const SignupScreen = () => {
   };
 
   return (
-    <View>
+    <View style ={styles.container}>
       <TextInput
+        style ={styles.input}
         placeholder="Name"
         value={name}
         onChangeText={setName}
       />
         <TextInput
-            placeholder="Device ID"
-            value={deviceId}
-              onChangeText={setDeviceId}
+          style ={styles.input}  
+          placeholder="Device ID"
+          value={deviceId}
+          onChangeText={setDeviceId}
           />
       <Button
         title="Sign Up"
@@ -38,5 +40,23 @@ const SignupScreen = () => {
     </View>
   );
 };
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 100,
+  },
+  input: {
+    
+    height: 40,
+    width: '150%',
+    borderColor: 'grey',
+    borderWidth: 3,
+    borderRadius: 5,
+    marginBottom: 20,
+    paddingHorizontal: 10,
+  },
+});
 
 export default SignupScreen;
