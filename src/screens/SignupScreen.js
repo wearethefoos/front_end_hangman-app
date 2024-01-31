@@ -50,11 +50,11 @@ const styles = StyleSheet.create({
   input: {
     
     height: 40,
-    width: '150%',
+    width: 'auto',
     borderColor: 'grey',
     borderWidth: 3,
     borderRadius: 5,
-    marginBottom: 20,
+    marginBottom: 10,
     paddingHorizontal: 10,
   },
 });

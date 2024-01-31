@@ -3,27 +3,32 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button ,TextInput} from 'react-native';
 
 import SignupScreen from './src/screens/SignupScreen';
+import Header from './src/components/Header';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome Human SignUp screen</Text>
+     <Header/>
       <SignupScreen/>
-      
+       <StatusBar style="auto" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+container: {
     flex: 1,
-    backgroundColor:  '#f0f0f0', 
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#fff',
   },
-  title: {
-    fontSize: 24, 
-    color: 'blue', 
-    marginBottom: 20, 
-  },
+  // container: {
+  //   flex: 1,
+  //   backgroundColor:  '#f0f0f0', 
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // },
+  // title: {
+  //   fontSize: 24, 
+  //   color: 'blue', 
+  //   marginBottom: 20, 
+  // },
 });
