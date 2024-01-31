@@ -1,20 +1,34 @@
+import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button ,TextInput} from 'react-native';
+
+import SignupScreen from './src/screens/SignupScreen';
+import Header from './src/components/Header';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+     <Header/>
+      <SignupScreen/>
+       <StatusBar style="auto" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  // container: {
+  //   flex: 1,
+  //   backgroundColor:  '#f0f0f0', 
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // },
+  // title: {
+  //   fontSize: 24, 
+  //   color: 'blue', 
+  //   marginBottom: 20, 
+  // },
 });
